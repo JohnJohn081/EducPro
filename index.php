@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -18,13 +18,13 @@
         <h4>coloque suas informações abaixo</h4>
     </header>
     <section>
-        <form action="login.php" method="post">
+        <form action="loginUser/login.php" method="post">
             <label for="unome">Usuario</label>
             <input type="text" name="nameUser" placeholder="Escreva seu usuario">
             <label for="usenha">Senha</label>
             <input type="password" name="senhaUser" placeholder="Insira a senha">
             <input type="submit" value="enviar">
-            <a href="cadastro.html">Não tem uma conta?</a>
+            <a href="loginUser/cadastro.html">Não tem uma conta?</a>
         </form>
     </section>
 </body>

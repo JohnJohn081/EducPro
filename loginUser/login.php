@@ -1,5 +1,5 @@
 <?php
-    include("conexao.php");
+    include("../tools/conexao.php");
     session_start();
 
     $userOrEmail = $_REQUEST["nameUser"];
@@ -19,7 +19,7 @@
         mysqli_stmt_fetch($stmt); // Pega o valor do usuário
         $_SESSION ["usuario"] = $user;
         $_SESSION["user_logado"] = true;
-        header("Location: areaLogada.php");
+        header("Location: ../home/areaLogada.php");
         exit(); 
     } else {
         echo "<script>alert('Erro 32/: Usuario ou senha errado'); window.location.href = 'index.php';</script>";
