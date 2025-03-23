@@ -22,7 +22,7 @@
         header("Location: ../home/areaLogada.php");
         exit(); 
     } else {
-        echo "<script>alert('Erro 32/: Usuario ou senha errado'); window.location.href = 'index.php';</script>";
+        echo "<script>alert('Erro 32/: Usuario ou senha errado'); window.location.href = '../index.php';</script>";
     }
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
