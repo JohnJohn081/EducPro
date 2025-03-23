@@ -8,18 +8,26 @@
         $emailUser = $_REQUEST["emailUser"];
 
         $sql = "INSERT INTO PESSOAS (USUARIO, NAMEUSER, PASSWORDUSER, EMAILUSER) VALUES (?, ?, ?, ?)";
+        $sql_check = "SELECT * FROM pessoas WHERE emailUser = ? OR usuario = ?";
 
-        $stmt = mysqli_prepare($conn, $sql);
-
-        mysqli_stmt_bind_param($stmt, "ssss", $user, $sobreNomeUser, $senhaUser, $emailUser);
-        // CORRIGIR ERRO DE EMAIL DUPLICADO ENTÃO FAZER UM AVISO CASO O 
-        //EMAIL DA PESSOA JA EXISTA NO SISTEMA (ISSO PRA USER TAMBEM!!)
-        if (mysqli_stmt_execute($stmt)) {
-            $_SESSION["user_logado"] = true;
-            $_SESSION["usuario"] = $user;
-            header("Location: ../home/areaLogada.php");
-            exit(); 
+        $stmt_check = mysqli_prepare($conn, $sql_check);
+        mysqli_stmt_bind_param($stmt_check, "ss", $emailUser, $user);
+        mysqli_stmt_execute($stmt_check);
+        $result = mysqli_stmt_get_result($stmt_check);
+        
+        if (mysqli_num_rows($result) > 0) {
+            echo "<script>alert('Erro 77/: Já existe alguem com esse Email/Usuario'); window.location.href = '../index.php';</script>";
         } else {
-            echo "Erro nesse codigo podre (cadastro não concluido)";
+            $stmt = mysqli_prepare($conn, $sql);
+
+            mysqli_stmt_bind_param($stmt, "ssss", $user, $sobreNomeUser, $senhaUser, $emailUser);
+            if (mysqli_stmt_execute($stmt)) {
+                $_SESSION["user_logado"] = true;
+                $_SESSION["usuario"] = $user;
+                header("Location: ../home/areaLogada.php");
+                exit(); 
+            } else {
+                echo "Erro nesse codigo podre (cadastro não concluido)";
+            }
         }
     ?>
