@@ -19,7 +19,7 @@
         mysqli_stmt_fetch($stmt); // Pega o valor do usuário
         $_SESSION ["usuario"] = $user;
         $_SESSION["user_logado"] = true;
-        header("Location: ../home/areaLogada.php");
+        header("Location: ../home/conteudos.php");
         exit(); 
     } else {
         echo "<script>alert('Erro 32/: Usuario ou senha errado'); window.location.href = '../index.php';</script>";

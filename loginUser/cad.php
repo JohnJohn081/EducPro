@@ -24,7 +24,7 @@
             if (mysqli_stmt_execute($stmt)) {
                 $_SESSION["user_logado"] = true;
                 $_SESSION["usuario"] = $user;
-                header("Location: ../home/areaLogada.php");
+                header("Location: ../home/conteudos.php");
                 exit(); 
             } else {
                 echo "Erro nesse codigo podre (cadastro não concluido)";
