@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #121826;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* Barra superior */
+#sidebar {
+    width: 100%;
+    height: 100px; /* Aumentei a altura */
+    background: #1F2937;
+    padding: 15px 40px; /* Mais espaço nas laterais */
+    color: #A1A1AA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Lista de navegação */
+#sidebar ul {
+    display: flex;
+    gap: 25px; /* Mais espaço entre os itens */
+    list-style: none;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Fonte um pouco maior */
+    padding: 12px 18px; /* Mais espaçamento interno */
+    transition: background 0.3s ease;
+    border-radius: 8px; /* Bordas mais suaves */
+}
+
+#sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.15); /* Efeito mais sutil */
+}
+
+/* Perfil do usuário na barra */
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Mais espaço entre a imagem e o texto */
+}
+
+#user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#user-details {
+    color: white;
+    margin-top: 10%;
+    font-size: 16px;
+}
+
+/* Barra de XP */
+#xp-bar {
+    width: 120px;
+    height: 10px;
+    background: #374151;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#xp-progress {
+    width: 40%;
+    height: 100%;
+    background: #3B82F6;
+}
+
+/* Ajustando o conteúdo para não ficar atrás da barra */
+#content {
+    padding: 25px;
+    background: #1F2937;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 120px 40px 20px; /* Ajustei para compensar a barra maior */
+}
+
+/* Estilos dos textos */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #A1A1AA;
+    border-bottom: 2px solid #374151;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #A1A1AA;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+/* Botão de conclusão */
+#complete-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+    padding: 12px 20px;
+    background: #3B82F6;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#complete-btn:hover {
+    background: #09ff00;
+}
+
