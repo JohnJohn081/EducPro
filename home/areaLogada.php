@@ -1,7 +1,7 @@
 <?php 
     session_start();
     if (!isset($_SESSION['user_logado']) || $_SESSION['user_logado'] !== true) {
-        echo "<script>alert('Erro 69/: Usuário deslogado!'); window.location.href = '../index.php';</script>";
+        echo "<script>alert('Erro 69/: Você não tem permissão!'); window.location.href = '../index.php';</script>";
         exit();
     }
 
