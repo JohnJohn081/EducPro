@@ -39,81 +39,79 @@
     </div>
 
     <div id="content">
-    <h1>Lógica de Programação</h1>
+    <h1>Estruturas de Dados</h1>
 
-    <h2>O que é Lógica de Programação?</h2>
+    <h2>O que são Estruturas de Dados?</h2>
     <p>
-        Lógica de programação é a base para o desenvolvimento de qualquer software. Ela envolve a sequência lógica de instruções 
-        que um programa deve seguir para resolver um problema. Independentemente da linguagem utilizada, os princípios 
-        da lógica de programação permanecem os mesmos.
+        Estruturas de dados são formas organizadas de armazenar e manipular informações em um programa. Elas são essenciais 
+        para otimizar a eficiência e a escalabilidade do código. Algumas das mais comuns são: arrays, listas, pilhas, filas e árvores.
     </p>
 
-    <h2>Estruturas Fundamentais</h2>
+    <h2>Principais Estruturas de Dados</h2>
     
-    <h3>1. Variáveis e Tipos de Dados</h3>
+    <h3>1. Arrays (Vetores)</h3>
     <p>
-        As variáveis são espaços na memória do computador onde podemos armazenar valores. No C, podemos definir variáveis de diferentes tipos:
+        Arrays armazenam múltiplos valores em um único nome de variável, acessados por um índice. São úteis para organizar grandes quantidades de dados do mesmo tipo.
     </p>
     <pre>
         <code>
-        int idade = 25;          // Número inteiro
-        float altura = 1.75;     // Número decimal
-        char letra = 'A';        // Caractere único
+        int numeros[5] = {10, 20, 30, 40, 50};  // Array com 5 elementos
+        printf("Primeiro número: %d", numeros[0]);  // Saída: 10
         </code>
     </pre>
 
-    <h3>2. Estruturas Condicionais</h3>
+    <h3>2. Listas Ligadas</h3>
     <p>
-        Condicionais permitem que o programa tome decisões com base em certas condições. No C, utilizamos `if`, `else if` e `else`:
+        Diferente dos arrays, listas ligadas permitem inserção e remoção dinâmicas de elementos, pois cada nó aponta para o próximo na memória.
     </p>
     <pre>
         <code>
-        int idade = 18;
-        if (idade >= 18) {
-            printf("Você é maior de idade!");
-        } else {
-            printf("Você é menor de idade.");
+        struct Node {
+            int valor;
+            struct Node* proximo;
+        };
+        </code>
+    </pre>
+
+    <h3>3. Pilhas (Stacks)</h3>
+    <p>
+        Pilhas seguem o princípio **LIFO (Last In, First Out)**, ou seja, o último elemento inserido é o primeiro a ser removido. No C, podemos manipular pilhas usando arrays ou listas ligadas.
+    </p>
+    <pre>
+        <code>
+        #define TAMANHO 5
+        int pilha[TAMANHO];
+        int topo = -1;
+
+        void push(int valor) {
+            if (topo < TAMANHO - 1) {
+                topo++;
+                pilha[topo] = valor;
+            }
         }
         </code>
     </pre>
 
-    <h3>3. Estruturas de Repetição</h3>
+    <h3>4. Filas (Queues)</h3>
     <p>
-        Laços de repetição são usados para executar um bloco de código várias vezes. No C, podemos usar `for`, `while` e `do-while`:
+        Filas seguem o princípio **FIFO (First In, First Out)**, onde o primeiro elemento adicionado é o primeiro a ser removido. São úteis para processamento de tarefas e algoritmos como BFS (Busca em Largura).
     </p>
     <pre>
         <code>
-        int i;
-        for (i = 1; i <= 5; i++) {
-            printf("Número: %d\n", i);
-        }
-        </code>
-    </pre>
-
-    <h3>4. Funções</h3>
-    <p>
-        Funções ajudam a organizar o código, tornando-o mais reutilizável e modular. Veja um exemplo de função em C:
-    </p>
-    <pre>
-        <code>
-        int soma(int a, int b) {
-            return a + b;
-        }
-
-        int main() {
-            int resultado = soma(10, 5);
-            printf("A soma é: %d", resultado);
-            return 0;
-        }
+        struct Fila {
+            int elementos[10];
+            int frente, tras;
+        };
         </code>
     </pre>
 
     <h2>Conclusão</h2>
     <p>
-        Compreender lógica de programação é essencial para qualquer desenvolvedor. A prática constante e a resolução de problemas 
-        ajudam a aprimorar essa habilidade, tornando a programação mais intuitiva e eficiente.
+        Estruturas de dados são fundamentais para qualquer desenvolvedor. Elas permitem otimizar a eficiência dos programas 
+        e são amplamente utilizadas em aplicações reais, como bancos de dados, sistemas operacionais e inteligência artificial.
     </p>
 </div>
+
 
 
     
