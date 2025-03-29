@@ -47,7 +47,7 @@
             <div class="conteudo">
                 <h2>Lógica de Programação</h2>
                 <p>Fundamentos essenciais da lógica de programação e exemplos em C.</p>
-                <a href="areaLogada.php" class="btn-ver">Acessar</a>
+                <a href="conteudo2.php" class="btn-ver">Acessar</a>
             </div>
             <div class="conteudo">
                 <h2>Estruturas de Dados</h2>
