@@ -4,6 +4,20 @@
          echo "<script>alert('Erro 69/: Você não tem permissão!'); window.location.href = '../index.php';</script>";
          exit();
      }
+
+     $sqlInfo = "SELECT xp, level FROM pessoas WHERE usuario = ? OR emailUser = ?";
+     $stmtInfo = mysqli_prepare($conn, $sqlInfo);
+
+
+     mysqli_stmt_bind_param($stmtInfo,"ss", $userOrEmail, $userOrEmail);
+     mysqli_stmt_execute($stmtInfo);
+     mysqli_stmt_bind_result($stmtInfo, $xp, $level); // aqui ele cata a info depois de logar
+     mysqli_stmt_fetch($stmtInfo);
+
+     $_SESSION ["usuario"] = $user;
+     $_SESSION ["xp"] = $xp;
+     $_SESSION ["nivel"] = $level;
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area de Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagem/educProLogo128.ico" type="image/x-icon">
 </head>
 <body>
     <header>
