@@ -18,6 +18,8 @@
         mysqli_stmt_bind_result($stmt, $user); // aqui ele cata o user depois de logar
         mysqli_stmt_fetch($stmt); // Pega o valor do usuário
         $_SESSION ["usuario"] = $user;
+        $_SESSION ["xp"] = 80;
+        $_SESSION ["nivel"] = 1;
         $_SESSION["user_logado"] = true;
         header("Location: ../home/conteudos.php");
         exit(); 

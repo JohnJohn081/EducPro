@@ -32,11 +32,11 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/552/552721.png" alt="User Profile">
             </a>
             <div id="user-details">
-                <p>Nome do Usuário</p>
-                <div id="xp-bar">
-                    <div id="xp-progress"></div>
+                <p><?php echo $_SESSION["usuario"]; ?></p>
+                <div id="xp-bar" >
+                <div id="xp-progress" style="width: <?php echo $_SESSION['xp']; ?>%;"></div>
                 </div>
-                <p>Nível: 5</p>
+                <p>Nível: <?php echo $_SESSION['nivel']; ?></p>
             </div>
         </div>
     </div>
@@ -45,29 +45,25 @@
         <h1>Conteúdos Disponíveis</h1>
         <div id="conteudos">
             <div class="conteudo">
-                <h2>Lógica de Programação</h2>
-                <p>Fundamentos essenciais da lógica de programação e exemplos em C.</p>
-                <a href="conteudo2.php" class="btn-ver">Acessar</a>
+                <h2>Algoritmo?</h2>
+                <p>Entenda o conceito de algoritmo, sua aplicação e um exemplo prático.</p>
+                <a href="algoritmo.php" class="btn-ver">Acessar</a>
+            </div>
+
+            <div class="conteudo">
+                <h2>Tipos Primitivos e Operadores Aritméticos</h2>
+                <p>Aprenda os tipos de dados básicos e operações matemáticas essenciais para cálculos em C.</p>
+                <a href="tiposPrimitivos.php" class="btn-ver">Acessar</a>
             </div>
             <div class="conteudo">
-                <h2>Estruturas de Dados</h2>
-                <p>Aprenda sobre arrays, listas, pilhas e filas.</p>
-                <a href="conteudo1.php" class="btn-ver">Acessar</a>
+                <h2>Operadores Lógicos e Estruturas de Controle</h2>
+                <p>Compreenda como controlar o fluxo de um programa e manipular condições.</p>
+                <a href="operadoresLogicos.php" class="btn-ver">Acessar</a>
             </div>
             <div class="conteudo">
-                <h2>Programação Orientada a Objetos</h2>
-                <p>Entenda conceitos como classes, objetos e herança.</p>
-                <a href="poo.html" class="btn-ver">Acessar</a>
-            </div>
-            <div class="conteudo">
-                <h2>Banco de Dados</h2>
-                <p>Fundamentos sobre SQL, NoSQL e modelagem de dados.</p>
-                <a href="banco.html" class="btn-ver">Acessar</a>
-            </div>
-            <div class="conteudo">
-                <h2>APIs e Web Services</h2>
-                <p>Aprenda a criar e consumir APIs RESTful.</p>
-                <a href="apis.html" class="btn-ver">Acessar</a>
+                <h2>Nome do proximo conteudo</h2>
+                <p>Descricao desse conteudo</p>
+                <a href="exemple.php" class="btn-ver">Acessar</a>
             </div>
         </div>
     </div>
