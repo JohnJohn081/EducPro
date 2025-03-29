@@ -6,7 +6,7 @@
     $password = $_REQUEST["senhaUser"];
 
     $sql = "SELECT usuario FROM pessoas WHERE (usuario = ? OR emailUser = ?) AND passwordUser = ?";
-    
+
     $stmt = mysqli_prepare($conn, $sql); // aqui ele prepara então add a conexão do conn e o sql
 
     mysqli_stmt_bind_param($stmt, "sss", $userOrEmail, $userOrEmail, $password);
