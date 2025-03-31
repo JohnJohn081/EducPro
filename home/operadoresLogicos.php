@@ -40,8 +40,8 @@
             <ul>
                 <li><a href="index.php">Início</a></li>
                 <li><a href="conteudos.php">Conteúdos</a></li>
-                <li><a href="exercicios.php">Exercícios</a></li>
-                <li><a href="ranking.php">Ranking</a></li>
+                <li><a href="exercicios/exercicios.php">Exercícios</a></li>
+                <li><a href="ranking/ranking.php">Ranking</a></li>
                 <li><a href="../tools/logout.php">Sair</a></li>
             </ul>
         </div>
